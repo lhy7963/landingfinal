@@ -1,172 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>랜딩 이미지</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Syndrome Syndrome</title>
+
 	<style type="text/css">
-		html{background: #202430; width: 1920px; height: 1080px; margin: 0; padding: 0;}
-		section { width: 1920px; height: 1080px; margin: 0; padding: 0;}
-
-		.container{width: 1920px; height: 5px; color: #DADEE9;}
-		.red{background-color: red;}
-		.blue{background-color: blue}
-
-		#emptydiv{width: 1920px; height:140px;margin: 0; padding: 0; }
-		#teamdiv{width: 1920px; height: 96px;margin: 0; padding: 0;display: flex;}
-		#titlediv{width: 1920px; height: 523px;margin: 0; padding: 0;}
-		#informationdiv{width: 1920px; height: 321px;margin-top:0px; padding: 0; }
-
-		#emptybox-empty{width: 1492px;}
-		#emptybox-text{width: 425px;}
-
-		#information-empty1{height: 130px; width: 1920px;}
-		#information-text{display: flex;}
-		#information-text1 	{width: 73px; height: 190px;}
-		#information-text2	{width: 228px; height: 190px;}
-		#information-text3	{width: 1188px; height: 190px;}
-		#information-text4	{width: 370px; height: 190px;}
-		#information-text5	{width: 61px; height: 190px;}
+		html {margin:0;padding:0;background-color: #EFEFEF; font-size: 16px; }
+		body {margin:0; padding: 0; font-size: em(32); // 32/16 = 2em; font-family: 'TheSeasons-BdIt', 'SpoqaHanSansNeo-Regular'; margin: 0;  }
+		section {margin: 0; padding: 0;}
+		* {font-family: inherit; box-sizing: border-box;}
+		div{transition: all 0.3s;}
 
 
-		.nav{margin:10px; display: none;}
-.RollDiv{margin:0 auto; width:1920px; height:523px;overflow:hidden;}  
-.RollDiv > div{overflow:hidden;height:523px;width:1920px}
-.RollDiv > div > a{ float:left; display:block;}  
-.RollDiv > div > a > img{ width:width:1920px; height:523px;margin-right:10px;}
-	</style>
-	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-	
-<section>
-	<!-- /*1번 섹션*/ -->
-	<div id="emptydiv" class="container">
-	</div>
-	<hr width = "1920px" color = "#DADEE9" size = "1">
+/* 폰트 */
+		@font-face{font-family: "TheSeasons-BdIt";
+               src:local(※), url(TheSeasons-BdIt.otf)format("opentype"),
+                  url('TheSeasons-BdIt.woff') format('woff');
+               unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E}
+		@font-face{font-family: "SpoqaHanSansNeo-Regular";
+               src:local(※), url(SpoqaHanSansNeo-Regular.otf)format("opentype"),
+                  url('SpoqaHanSansNeo-Regular.woff') format('woff');
+               unicode-range:  U+AC00-D7A3}
 
-	<!-- /*2번 팀 섹션*/ -->
-	<div id="teamdiv" class="container">
-		<div id="emptybox-empty" class="red">Empty box</div>
-		<div id="emptybox-text" class="blue">Team. Two Hyun</div>
-	</div>
-	<hr width = "1920px" color = "#DADEE9" size = "1">
 
-	<!-- /*3번 제목 섹션*/ -->
-	<div id="titlediv" class="container">
-	
-		 <div class="nav">
-  <button onClick="moveType=0;">왼쪽으로</button>  
-  <button onClick="moveType=1;">오른쪽으로</button>  
-  <button onClick="movePause=true;">일시정지</button>  
-  <button onClick="goMove();">움직이기</button>  
-  </div>
-  <div class="RollDiv">  
-    <div>  
-      <a href=""><img src="title.png" /></a>  
-      <a href=""><img src="title1.png" /></a>  
-      <a href=""><img src="title.png" /></a>  
-      <a href=""><img src="title1.png" /></a>  
-      <a href=""><img src="title.png" /></a>  
-      <a href=""><img src="title1.png" /></a>  
-      <a href=""><img src="title.png" /></a>  
-    </div>  
-  </div>   
-	</div>
-	<hr width = "1920px" color = "#DADEE9" size = "1">
-	<!-- /*4번 인포메이션 섹션*/ -->
-	<div id="informationdiv" class="container">
-		<div id="information-empty1" class="red"> empty</div>
-		<div id="information-text">
-			<div id="information-text1" class="blue">1</div>
-			<div id="information-text2" class="blue">
-				<div>Exhibition</div>
-				<div>옥타린: 연(緣)</div>
-			</div>
-			<div id="information-text3" class="blue">3</div>
-			<div id="information-text4" class="blue">
-				<div>Gallary lamer</div>
-				<div>2022.01.26 - 2022.02.07</div>
-			</div>
-			<div id="information-text5" class="blue">5</div>
-		</div>
+/* id */
+
+.one{height:13vh; display: flex; border-bottom: black solid 2px;}
+.one:hover{background: #202430;  height:13vh; display: flex; border-bottom: #DADEE9 solid 2px; }
+
+.two{height: 9.3vh; display: flex;align-items: center; border-bottom: black solid 2px;}
+.two:hover{background: #202430;color: #DADEE9; height:9.3vh; display: flex; border-bottom: #DADEE9 solid 2px; }
+
+.three{height: 48.1vh; display: flex; border-bottom: black solid 2px;}
+.three:hover{background: #202430; height:48.1vh; display: flex; border-bottom: #DADEE9 solid 2px; }
+
+.four{height:29.6vh; display: flex;  align-items: center;}
+.four:hover{background: #202430; color: #DADEE9;  height:29.6vh; display: flex; border-bottom: #DADEE9 solid 2px; }
+
+#oneone{width:140.3vw;  }
+#onetwo{width:37.5vw;font-size: 2em; }
+#fourone{width:9.2vw; font-size: 2em; }
+#fourtwo{width:130vw;font-size: 2em; }
+#fourthree{width:37.5vw; font-size: 2em; }
+
+/*
+.red{background-color: red; }
+.blue{background: blue;  }
+.yellow{background: yellow;}
+
+*/
+
+.moving {
 		
-	
-	</div>
+		background:url('titleblack.png') 0 center / 1700px repeat-x;
+		animation: movebg 4s linear infinite;
+	}
+
+	@keyframes movebg {
+		0% {background-position:0 center;}
+		100% {background-position:-100vw center;}
+	}
+.moving:hover{background:url(title.png) #202430 0 center / 1700px repeat-x;
+		animation: movebg 4s linear infinite}
+
+<body>
+	<section>}
+
+
+
+
+	</style>
+</head>
+<section>
+		<div class="one yellow"></div>
+
+		<div class="two yellow">
+			<div class="red" id="oneone"></div>
+			<div class="blue" id="onetwo">Team. Two Hyun</div>
+		</div>
+
+		<div style="cursor: pointer;" onclick="location.href='https://lhy7963.github.io/mainfinal/';" class="three yellow moving ">
+		</div>
+			
+		</div>
+
+		<div class="four yellow">
+			<div class="red" id="fourone">
+			</div>
+			<div class="blue" id="fourtwo">
+				<p>Exhibition</p>
+				<p>옥타린: 연(緣)</p>
+			</div>
+			<div class="red" id="fourthree">
+				<p>Gallary lamer</p>
+				<p>2022.01.26 - 2022.02.07</p>
+			</div>
+		</div>
 
 </section>
-<script type="text/javascript">
-  // moveType (0:left / 1:right) 
-var moveType = 0; 
-// 이동시간간격 3초 
-var moveSpeed = 3000; 
-// 움직이는 작업중 다시 명령 받지 않음 
-var moveWork = false; 
-// 일시정지 flag 
-var movePause = false; 
-function imgMove(){ 
-    if(moveWork==false){ 
-       // 0d\일경우 left방향 
-      if(moveType==0){ 
-         // 맨처음 이미지의 폭 
-         var aWidth = $(".RollDiv > div > a:first").width(); 
-         // 롤링마지막에 맨처음의 a태그 추가 
-         $(".RollDiv > div").append("<a href=\""+$(".RollDiv > div > a:first").attr("href")+"\">" + $(".RollDiv > div > a:first").html()+ "</a>"); 
-         // 맨처음이미지를 왼쪽으로 이동시킨다. 
-         $(".RollDiv > div > a:first").animate({marginLeft:-aWidth},{duration:moveSpeed,step:function(){ 
-         // 이동중 만약 일시정지 flag가 true라면 
-         if(movePause==true){ 
-            // 이동을 멈춘다 
-            $(this).stop(); 
-         } 
-         },complete:function(){ 
-         // 이동을 마친후 첫번째 a태그를 지워버린다 
-         $(this).remove(); 
-         // 이미지 움직이는것을 다시 실행 
-         imgMove(); 
-      }}); 
-      }else{ 
-      // 마지막 a태그의 폭 
-       var aWidth = $(".RollDiv > div > a:last").width(); 
-       // a태그 앞에 마지막의 a태그를 생성한다 단 스타일은 마지막 a태그의 폭만큼 빼준다 
-       $("<a href=\"" + $(".RollDiv > div > a:last").attr("href")+ "\" style=\"margin-left:-" + aWidth + "px\">" + $(".RollDiv > div > a:last").html()+ "</a>").insertBefore(".RollDiv > div > a:first") 
-       // 맨처음 a태그의 margin-left를 다시 0으로 맞춰준다. 
-      $(".RollDiv > div > a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
-       // 이동중 만약 일시정지 flag가 true라면 
-       if(movePause==true){ 
-          // 이동을 멈춘다 
-          $(this).stop(); 
-       } 
-       },complete:function(){ 
-       // 이동을 마친후 마지막 a태그를 지워버린다 
-       $(".RollDiv > div > a:last").remove(); 
-       // 이미지 움직이는것을 다시 실행 
-       imgMove(); 
-    }}); 
- } 
- } 
- } 
- function goMove(){ 
-    // 일시정지가 풀려있을 경우를 대비하여 일시정지를 풀러준다 
-    movePause=false; 
-    // 0d\일경우 left방향 
-    if(moveType==0){ 
-       imgMove(); 
-       }else{ 
-       $(".RollDiv > div > a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
-       // 이동중 만약 일시정지 flag가 true라면 
-       if(movePause==true){ 
-          // 이동을 멈춘다 
-          $(this).stop(); 
-      } 
-       },complete:function(){ 
-      // 이동을 마친후 마지막 a태그를 지워버린다 
-      //$(".RollDiv > div > a:last").remove(); 
-      // 이미지 움직이는것을 다시 실행 
-      imgMove(); 
-   }}); 
-}
-   
-}
-imgMove(); 
-</script>
+
+
 </body>
 </html>
